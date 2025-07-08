@@ -1,10 +1,5 @@
 @import "tailwindcss";
-#root{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+
+html, body, #root {
+  height: 100%;
 }
