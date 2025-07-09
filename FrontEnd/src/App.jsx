@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import MyOrders from './pages/MyOrders';
 import AdminOnly from './pages/AdminOnly';
 import Landing from './pages/Landing';
+import Menu from './components/Menu';
 
 function App() {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ function App() {
         <Route index element={<Landing />} />
 
         {/* Pages */}
+        <Route path='menu' element={<Menu />} />
         <Route path='myorder' element={<MyOrders />} />
         <Route path='addfood' element={user?.role === 'admin' ? <AddFood /> : <AdminOnly />} />
         <Route path='dashboard' element={user?.role === 'admin' ? <Dashboard /> : <AdminOnly />} />

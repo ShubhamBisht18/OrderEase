@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Home() {
     return (
-        <section id="home" className=" w-screen h-[calc(100vh-65px)] lg:h-[calc(100vh-65px)] flex justify-center items-center">
+        <section id="home" className="h-[calc(100vh-65px)] lg:h-[calc(100vh-65px)] flex justify-center items-center">
             <div className=" h-[90%] w-[90%] flex justify-center items-center flex-col">
                 <div className="sm:w-[600px] sm:h-[265px] lg:w-[800px] lg:h-[300px] flex justify-center items-center flex-col">
                     <div className="sm:w-[100%] lg:w-[80%] flex justify-center items-center flex-col gap-4">

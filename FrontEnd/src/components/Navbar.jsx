@@ -34,18 +34,18 @@ function Navbar({ user, setUser }) {
         // Fixed bar spans full viewport width regardless of parent flex settings
         <nav className="sticky z-30 top-0 w-screen h-[65px] text-gray-200 font-medium flex items-center justify-center bg-white">
             {/* Smooth‑scroll links */}
-            <div className=' lg:flex justify-center gap-[30px] items-center w-[1000px] h-[65px] hidden text-black'>
-                <img src="src\assets\Logo.png" alt="Logo" className='w-[190px] mr-[30px]' />
-                <Link onClick={() => scrollToSection('home')}>Home</Link>
-                <Link onClick={() => scrollToSection('menu')}>Menu</Link>
-                <Link onClick={() => scrollToSection('about')}>About</Link>
-                <Link onClick={() => scrollToSection('contact')}>Contact</Link>
+            <div className=' lg:flex justify-center gap-[20px] items-center w-[90%] h-[65px] hidden text-black'>
+                <img src="src\assets\Logo.png" alt="Logo" className='w-[190px] mr-[15px]' />
+                <Link to="/" onClick={() => scrollToSection('home')}>Home</Link>
+                <Link to="/" onClick={() => scrollToSection('home')}>Menu</Link>
+                <Link to="/" onClick={() => scrollToSection('about')}>About</Link>
+                <Link to="/" onClick={() => scrollToSection('contact')}>Contact</Link>
 
                 {/* Route links */}
-                <Link to="/myorder">My Orders</Link>
+                <Link to="/myorder">MyOrders</Link>
                 {user?.role === 'admin' && (
                     <>
-                        <Link to="/addfood">Add Food</Link>
+                        <Link to="/addfood">AddFood</Link>
                         <Link to="/dashboard">Dashboard</Link>
                     </>
                 )}
@@ -57,7 +57,7 @@ function Navbar({ user, setUser }) {
                 <img src="src/assets/Logo.png" alt="Logo" className="w-[150px]" />
 
                 {/* Menu Icon */}
-                <button onClick={handleLogout} className="bg-orange-400 text-gray-100 font-bold rounded-[5px] h-[40px] w-[90px] ml-[30px]">Logout</button>
+                <button onClick={handleLogout} className="bg-orange-400 text-gray-100 font-bold rounded-[5px] h-[40px] w-[90px] ml-[15px]">Logout</button>
             </div>
 
             {/* Mobile Sidebar (only 4 links) */}
@@ -77,7 +77,7 @@ function Navbar({ user, setUser }) {
                     <button onClick={() => scrollToSection('home')}><img className='w-[25px] h-[25px]' src="src/assets/home.png" alt="Home" /></button>
                 </div>
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
-                    <button onClick={() => scrollToSection('menu')}><img className='w-[25px] h-[25px]' src="src/assets/menu.png" alt="Menu" /></button>
+                    <Link to="/menu"><img className='w-[25px] h-[25px]' src="src/assets/menu.png" alt="Menu" /></Link>
                 </div>
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
                     <button onClick={() => scrollToSection('about')}><img className='w-[25px] h-[25px]' src="src/assets/aboutus.png" alt="About" /></button>
