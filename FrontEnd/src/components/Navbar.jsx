@@ -37,11 +37,11 @@ function Navbar({ user, setUser }) {
             <div className=' lg:flex justify-center gap-[20px] items-center w-[90%] h-[65px] hidden text-black'>
                 <img src="src\assets\Logo.png" alt="Logo" className='w-[190px] mr-[15px]' />
                 <Link to="/" onClick={() => scrollToSection('home')}>Home</Link>
-                <Link to="/" onClick={() => scrollToSection('home')}>Menu</Link>
                 <Link to="/" onClick={() => scrollToSection('about')}>About</Link>
                 <Link to="/" onClick={() => scrollToSection('contact')}>Contact</Link>
 
                 {/* Route links */}
+                <Link to="/menu">Menu</Link>
                 <Link to="/myorder">MyOrders</Link>
                 {user?.role === 'admin' && (
                     <>

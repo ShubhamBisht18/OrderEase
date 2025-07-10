@@ -41,15 +41,15 @@ function Menu() {
   };
 
   // 🔥 Group foods into rows of 10 items
-  const groupFoods = (arr, size = 10) => {
-    const grouped = [];
-    for (let i = 0; i < arr.length; i += size) {
-      grouped.push(arr.slice(i, i + size));
-    }
-    return grouped;
-  };
+  // const groupFoods = (arr, size = 10) => {
+  //   const grouped = [];
+  //   for (let i = 0; i < arr.length; i += size) {
+  //     grouped.push(arr.slice(i, i + size));
+  //   }
+  //   return grouped;
+  // };
 
-  const groupedFoods = groupFoods(foods, 10); // 🔥 10 cards per row
+  // const groupedFoods = groupFoods(foods, 10); // 🔥 10 cards per row
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center bg-white overscroll-x-none">
@@ -61,7 +61,6 @@ function Menu() {
       {/* Multiple scrollable rows */}
       <div className="w-[100%] h-[100%] flex justify-center items-center flex-col">
         <div className="w-[100%] flex flex-col gap-10 mt-8"> {/* 🔥 gap between rows */}
-        {groupedFoods.map((row, index) => (
           <div className=" overflow-x-auto px-2"> {/* 🔥 added overflow-x-auto */}
         <div className="flex gap-6 py-6 w-max mt-[30px]"> {/* 🔥 replaced grid with flex and added w-max */}
           {foods.map(food => (
@@ -82,7 +81,6 @@ function Menu() {
           ))}
         </div>
       </div>
-        ))}
       </div>
 
       {/* Add to Cart Button */}
