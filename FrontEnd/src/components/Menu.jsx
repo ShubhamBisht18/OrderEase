@@ -52,14 +52,14 @@ function Menu() {
   // const groupedFoods = groupFoods(foods, 10); // 🔥 10 cards per row
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center bg-white overscroll-x-none">
+    <div className="w-full h-[calc(100vh-65px)] flex flex-col items-center bg-white overscroll-x-none">
       {/* Header */}
-      <div className="w-full h-[120px] overflow-hidden flex justify-center items-center bg-white">
+      <div className="mt-[30px] w-full h-[120px] overflow-hidden flex justify-center items-center bg-white">
         <img className="w-[250px] sm:w-[300px]" src="src/assets/Video/menu final video.gif" alt="Menu" />
       </div>
 
       {/* Multiple scrollable rows */}
-      <div className="w-[100%] h-[100%] flex justify-center items-center flex-col">
+      <div className="w-[100%] h-[70%] flex justify-center items-center flex-col">
         <div className="w-[100%] flex flex-col gap-10 mt-8"> {/* 🔥 gap between rows */}
           <div className=" overflow-x-auto px-2"> {/* 🔥 added overflow-x-auto */}
         <div className="flex gap-6 py-6 w-max mt-[30px]"> {/* 🔥 replaced grid with flex and added w-max */}
@@ -84,7 +84,7 @@ function Menu() {
       </div>
 
       {/* Add to Cart Button */}
-      <div className="mt-8">
+      <div className="mt-[50px]">
         <button onClick={handleAddToCart} className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2 rounded-lg shadow-md">
           Add to Cart
         </button>

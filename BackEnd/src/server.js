@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+import Razorpay from 'razorpay'
 import dotenv from 'dotenv'
 dotenv.config({
     path: './src/.env'
@@ -18,6 +19,29 @@ const app = express()
 app.use(cors({origin: process.env.CLIENT_URL,credentials: true}))
 app.use(express.json())
 app.use(cookieParser())
+
+// --- Razorpay instance
+const razorpay = new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
+})
+
+// --- Razorpay route
+app.post('/api/payment/create-order', async (req, res) => {
+  const options = {
+    amount: req.body.amount * 100, // in paise
+    currency: 'INR',
+    receipt: 'receipt_order_1',
+  }
+
+  try {
+    const order = await razorpay.orders.create(options)
+    res.json(order)
+  } catch (err) {
+    console.error('Razorpay error:', err)
+    res.status(500).send('Error creating order')
+  }
+})
 
 // Routes
 app.use('/api/auth',authRoutes)

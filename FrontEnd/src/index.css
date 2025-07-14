@@ -22,3 +22,81 @@ html, body {
   background-color: #fb923c;
   border-radius: 10px;
 }
+
+/* ⬅️ Left to Right Animation */
+@keyframes appearLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+.XacessLoad1 {
+  animation: appearLeftToRight 1s ease forwards;
+}
+
+.XacessLoad2 {
+  animation: appearLeftToRight 0.5s ease forwards;
+}
+.XacessLoad3 {
+  animation: appearLeftToRight 1s ease forwards;
+}
+.XacessLoad4 {
+  animation: appearLeftToRight 1.5s ease forwards;
+}
+
+
+
+/* ➡️ Right to Left Animation */
+@keyframes appearRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px); /* Start from the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+.XacessLoad2 {
+  animation: appearRightToLeft 1s ease forwards;
+}
+
+
+/* ⬆️ Bottom to Top Animation */
+@keyframes appearBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(100px); /* Start from bottom */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.XacessLoadBottom {
+  animation: appearBottomToTop 1s ease forwards;
+}
+
+
+/* ⬇️ Top to Bottom Animation */
+@keyframes appearTopToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-100px); /* Start from top */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.XacessLoadTop {
+  animation: appearTopToBottom 0.5s ease forwards;
+}
