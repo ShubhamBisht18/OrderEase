@@ -59,7 +59,7 @@ function Menu() {
       </div>
 
       {/* Multiple scrollable rows */}
-      <div className="w-[100%] h-[70%] flex justify-center items-center flex-col">
+      <div className="w-[80%] h-[70%] flex justify-center items-center flex-col">
         <div className="w-[100%] flex flex-col gap-10 mt-8"> {/* 🔥 gap between rows */}
           <div className=" overflow-x-auto px-2"> {/* 🔥 added overflow-x-auto */}
         <div className="flex gap-6 py-6 w-max mt-[30px]"> {/* 🔥 replaced grid with flex and added w-max */}
