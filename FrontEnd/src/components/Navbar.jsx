@@ -86,7 +86,7 @@ function Navbar({ user, setUser }) {
             <div className="fixed right-2 top-1/2 -translate-y-1/2 flex flex-col gap-4 ml-2 lg:hidden">
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
                     {/* <button onClick={() => scrollToSection('home')}><img className='w-[25px] h-[25px]' src="src/assets/home.png" alt="Home" /></button> */}
-                    <button onClick={() => scrollToSection('home')}><img className='w-[25px] h-[25px]' src="src/assets/home.png" alt="Home" /></button>
+                    <button onClick={() => scrollToSection('home')}><img className='w-[25px] h-[25px]' src={home} alt="Home" /></button>
                 </div>
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
                     {/* <Link to="/menu"><img className='w-[25px] h-[25px]' src="src/assets/menu.png" alt="Menu" /></Link> */}
