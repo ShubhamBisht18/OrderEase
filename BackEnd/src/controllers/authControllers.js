@@ -33,8 +33,7 @@ export const Register = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,                          // not accessible via JS
             secure: process.env.NODE_ENV === 'production', // HTTPS only in prod
-            sameSite: process.env.NODE_ENV === 'None', // cross-site in prod
-            // sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', // cross-site in prod
+            sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', // cross-site in prod
             maxAge: 24 * 60 * 60 * 1000              // 1 day
         });
 
@@ -70,8 +69,7 @@ export const Login = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,                          // not accessible via JS
             secure: process.env.NODE_ENV === 'production', // HTTPS only in prod
-            sameSite: process.env.NODE_ENV === 'None', // cross-site in prod
-            // sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', // cross-site in prod
+            sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', // cross-site in prod
             maxAge: 24 * 60 * 60 * 1000              // 1 day
         });
 
@@ -115,8 +113,7 @@ export const GetUser = async (req, res) => {
 export const Logout = async (req, res) => {
     res.clearCookie('token', {
         httpOnly: true,
-        sameSite: process.env.NODE_ENV === 'None',
-        // sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
+        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
         secure: process.env.NODE_ENV === 'production'
     });
 
