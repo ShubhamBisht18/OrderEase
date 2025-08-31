@@ -2,6 +2,7 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from '../axios';
+import logo from '../assets/Logo.png'
 
 function Register({ setUser }) {
   const { register, handleSubmit } = useForm();
@@ -25,7 +26,8 @@ function Register({ setUser }) {
       <div className='w-4/5 h-3/5 absolute flex justify-center lg:justify-between items-center'>
         {/* Welcome panel: hidden below 1024px, visible at 1024px and above */}
         <div className='w-[55%] h-[97%] hidden lg:block'>
-          <img src='src/assets/Logo.png' alt='Logo' />
+          {/* <img src='src/assets/Logo.png' alt='Logo' /> */}
+          <img src={logo} alt='Logo' />
           <br />
           <h1 className='text-4xl font-extrabold text-gray-900'>Welcome to OrderEase</h1>
           <p className='mt-2 text-[18px] font-medium text-gray-500 w-11/12'>
