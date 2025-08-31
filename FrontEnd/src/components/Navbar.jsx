@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from '../axios';
 import { useState } from 'react';
 import logo from '../assets/Logo.png'
+
 function Navbar({ user, setUser }) {
     const [open, setOpen] = useState(false)
     const navigate = useNavigate();
@@ -35,7 +36,8 @@ function Navbar({ user, setUser }) {
         <nav className="sticky z-30 top-0 w-screen h-[65px] text-gray-200 font-medium flex items-center justify-center bg-white">
             {/* Smooth‑scroll links */}
             <div className=' lg:flex justify-center gap-[20px] items-center w-[90%] h-[65px] hidden text-black'>
-                <img src="src\assets\Logo.png" alt="Logo" className='w-[190px] mr-[15px]' />
+                <img src={logo} alt="Logo" className='w-[190px] mr-[15px]' />
+                {/* <img src="src\assets\Logo.png" alt="Logo" className='w-[190px] mr-[15px]' /> */}
                 <Link to="/" onClick={() => scrollToSection('home')}>Home</Link>
                 <Link to="/" onClick={() => scrollToSection('about')}>About</Link>
                 <Link to="/" onClick={() => scrollToSection('contact')}>Contact</Link>
