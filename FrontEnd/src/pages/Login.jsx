@@ -29,7 +29,7 @@ function Login({ setUser }) {
             <div className='w-[100%] h-[75%] bg-white'></div>
             <div className='w-[80%] h-[60%] absolute flex justify-center lg:justify-between items-center'>
                 <div className='w-[55%] h-[97%] hidden lg:block'>
-                    <img src="src\assets\Logo.png" alt="Logo" />
+                    {/* <img src="src\assets\Logo.png" alt="Logo" /> */}
                     <img src={logo} alt="Logo" />
                     <br />
                     <h1 className="text-4xl font-extrabold text-gray-900">Welcome to OrderEase</h1>
