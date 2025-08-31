@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import useInViewAnimation from "../hook/useInViewAnimation ";
+import phone from '../assets/phone.png'
+import location from '../assets/location.png'
+import email from '../assets/email.png'
 
 export default function Contact() {
 
@@ -66,7 +69,8 @@ export default function Contact() {
           <div ref={leftRef} className={`bg-white p-6 rounded-xl shadow-md flex items-center gap-4 ${
           showLeft ? "XacessLoad2" : "opacity-0"
         }`}>
-            <img src="src/assets/location.png" className="w-10 h-10" alt="Location" />
+            {/* <img src="src/assets/location.png" className="w-10 h-10" alt="Location" /> */}
+            <img src={location} className="w-10 h-10" alt="Location" />
             <div>
               <h2 className="text-xl font-semibold text-orange-500">Our Location</h2>
               <p className="text-gray-500">Haldwani, Uttarakhand</p>
@@ -77,7 +81,8 @@ export default function Contact() {
           <div ref={leftRef} className={`bg-white p-6 rounded-xl shadow-md flex items-center gap-4 ${
           showLeft ? "XacessLoad3" : "opacity-0"
         }`}>
-            <img src="src/assets/email.png" className="w-8 h-8" alt="Email" />
+            {/* <img src="src/assets/email.png" className="w-8 h-8" alt="Email" /> */}
+            <img src={email} className="w-8 h-8" alt="Email" />
             <div>
               <h2 className="text-xl font-semibold text-orange-400">Email Us</h2>
               <p className="text-gray-500">MyContact05@gmail.com</p>
@@ -88,7 +93,8 @@ export default function Contact() {
           <div ref={leftRef} className={`bg-white p-6 rounded-xl shadow-md flex items-center gap-4 ${
           showLeft ? "XacessLoad4" : "opacity-0"
         }`}>
-            <img src="src/assets/phone.png" className="w-8 h-8" alt="Phone" />
+            {/* <img src="src/assets/phone.png" className="w-8 h-8" alt="Phone" /> */}
+            <img src={phone} className="w-8 h-8" alt="Phone" />
             <div>
               <h2 className="text-xl font-semibold text-orange-400">Call Us</h2>
               <p className="text-gray-500">+91 75xxxxxxx321</p>
