@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import instance from "../axios";
 import { useNavigate } from 'react-router-dom';
-
+import menu from '../assets/Video/menu.gif'
 function Menu() {
   const navigate = useNavigate();
   const [foods, setFoods] = useState([]);
@@ -55,7 +55,8 @@ function Menu() {
     <div className="w-full h-[calc(100vh-65px)] flex flex-col items-center bg-white overscroll-x-none">
       {/* Header */}
       <div className="mt-[30px] w-full h-[120px] overflow-hidden flex justify-center items-center bg-white">
-        <img className="w-[250px] sm:w-[300px]" src="src/assets/Video/menu final video.gif" alt="Menu" />
+        {/* <img className="w-[250px] sm:w-[300px]" src="src/assets/Video/menu final video.gif" alt="Menu" /> */}
+        <img className="w-[250px] sm:w-[300px]" src={menu} alt="Menu" />
       </div>
 
       {/* Multiple scrollable rows */}

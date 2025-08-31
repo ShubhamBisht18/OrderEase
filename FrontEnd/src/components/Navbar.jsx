@@ -2,7 +2,7 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from '../axios';
 import { useState } from 'react';
-
+import logo from '../assets/Logo.png'
 function Navbar({ user, setUser }) {
     const [open, setOpen] = useState(false)
     const navigate = useNavigate();
@@ -54,7 +54,8 @@ function Navbar({ user, setUser }) {
 
             {/* Mobile Nav */}
             <div className="flex justify-between w-[85%] items-center h-[65px] lg:hidden">
-                <img src="src/assets/Logo.png" alt="Logo" className="w-[150px]" />
+                {/* <img src="src/assets/Logo.png" alt="Logo" className="w-[150px]" /> */}
+                <img src={logo} alt="Logo" className="w-[150px]" />
 
                 {/* Menu Icon */}
                 <button onClick={handleLogout} className="bg-orange-400 text-gray-100 font-bold rounded-[5px] h-[40px] w-[90px] ml-[15px]">Logout</button>
