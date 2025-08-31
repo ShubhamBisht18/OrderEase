@@ -3,6 +3,14 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from '../axios';
 import { useState } from 'react';
 import logo from '../assets/Logo.png'
+import home from '../assets/home.png'
+import about from '../assets/aboutus.png'
+import contact from '../assets/call.png'
+import myorder from '../assets/myorder.png'
+import dashboard from '../assets/dashboard.png'
+import addfood from '../assets/addfood.png'
+import menu from '../assets/menu.png'
+
 
 function Navbar({ user, setUser }) {
     const [open, setOpen] = useState(false)
@@ -77,27 +85,33 @@ function Navbar({ user, setUser }) {
 
             <div className="fixed right-2 top-1/2 -translate-y-1/2 flex flex-col gap-4 ml-2 lg:hidden">
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
+                    {/* <button onClick={() => scrollToSection('home')}><img className='w-[25px] h-[25px]' src="src/assets/home.png" alt="Home" /></button> */}
                     <button onClick={() => scrollToSection('home')}><img className='w-[25px] h-[25px]' src="src/assets/home.png" alt="Home" /></button>
                 </div>
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
-                    <Link to="/menu"><img className='w-[25px] h-[25px]' src="src/assets/menu.png" alt="Menu" /></Link>
+                    {/* <Link to="/menu"><img className='w-[25px] h-[25px]' src="src/assets/menu.png" alt="Menu" /></Link> */}
+                    <Link to="/menu"><img className='w-[25px] h-[25px]' src={menu} alt="Menu" /></Link>
                 </div>
-                <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
+                {/* <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
                     <button onClick={() => scrollToSection('about')}><img className='w-[25px] h-[25px]' src="src/assets/aboutus.png" alt="About" /></button>
                 </div>
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
                     <button onClick={() => scrollToSection('contact')}><img className='w-[25px] h-[25px]' src="src/assets/call.png" alt="Contact" /></button>
-                </div>
+                </div> */}
                 <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
-                    <Link to="/myorder"><img className='w-[25px] h-[30px]' src="src/assets/myorder.png" alt="MyOrder" /></Link>
+                    {/* <Link to="/myorder"><img className='w-[25px] h-[30px]' src="src/assets/myorder.png" alt="MyOrder" /></Link> */}
+                    <Link to="/myorder"><img className='w-[25px] h-[30px]' src={myorder} alt="MyOrder" /></Link>
                 </div>
                 {user?.role === 'admin' && (
                     <>
                         <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
-                            <Link to="/addfood"><img className='w-[25px] h-[25px]' src="src/assets/addfood.png" alt="AddFood" /></Link>
+                            {/* <Link to="/addfood"><img className='w-[25px] h-[25px]' src="src/assets/addfood.png" alt="AddFood" /></Link> */}
+                            {/* <Link to="/addfood"><img className='w-[25px] h-[25px]' src="src/assets/addfood.png" alt="AddFood" /></Link> */}
+                            <Link to="/addfood"><img className='w-[25px] h-[25px]' src={addfood} alt="AddFood" /></Link>
                         </div>
                         <div className="border-2 border-white rounded-[7px] w-[40px] h-[40px] bg-orange-400 flex justify-center items-center">
-                            <Link to="/dashboard"><img className='w-[25px] h-[25px]' src="src/assets/dashboard.png" alt="Dashboard" /></Link>
+                            <Link to="/dashboard"><img className='w-[25px] h-[25px]' src={dashboard} alt="Dashboard" /></Link>
+                            {/* <Link to="/dashboard"><img className='w-[25px] h-[25px]' src="src/assets/dashboard.png" alt="Dashboard" /></Link> */}
                         </div>
                     </>
                 )}
