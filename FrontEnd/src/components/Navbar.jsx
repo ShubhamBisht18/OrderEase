@@ -47,8 +47,8 @@ function Navbar({ user, setUser }) {
                 <img src={logo} alt="Logo" className='w-[190px] mr-[15px]' />
                 {/* <img src="src\assets\Logo.png" alt="Logo" className='w-[190px] mr-[15px]' /> */}
                 <Link to="/" onClick={() => scrollToSection('home')}>Home</Link>
-                <Link to="/" onClick={() => scrollToSection('about')}>About</Link>
-                <Link to="/" onClick={() => scrollToSection('contact')}>Contact</Link>
+                {/* <Link to="/" onClick={() => scrollToSection('about')}>About</Link>
+                <Link to="/" onClick={() => scrollToSection('contact')}>Contact</Link> */}
 
                 {/* Route links */}
                 <Link to="/menu">Menu</Link>
